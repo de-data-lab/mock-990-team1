@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Map from "../Components/Map";
+
 
 function Home() {
   return (
@@ -10,7 +10,6 @@ function Home() {
         <p className="lead">Our project about Non Profit Funding</p>
         <p>It's all fun here!</p>
       </div>
-      <Map/>
     </div>
   );
 }
