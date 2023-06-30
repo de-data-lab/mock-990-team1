@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import React, { useState, useEffect } from "react";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import { Bar } from "react-chartjs-2";
 import {
   BarElement,
@@ -22,29 +22,34 @@ ChartJS.register(
   Legend
 );
 
-
 function ChartWithDropDown() {
-    const [graphData,setGraphData] = useState(data)
-    const [graphOptions, setGraphOptions] =useState(option)
+  const [graphData, setGraphData] = useState(data);
+  const [graphOptions, setGraphOptions] = useState(option);
 
-    function data1(evt){
-        setGraphData(data)
-        setGraphOptions(option)
-    }
-    function data2(evt){
-        setGraphData(allRecievedByState)
-        setGraphOptions(option2018)
-    }
+  const datasets = [
+    { label: "Data Set One", options: option, data: data },
+    { label: "Data Set Two", options: option2018, data: allRecievedByState },
+  ];
 
   return (
     <div>
-    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-      <Dropdown.Item onClick={data1}>Data Set one</Dropdown.Item>
-      <Dropdown.Item onClick={data2}>Data Set two</Dropdown.Item>
-    </DropdownButton>
-    <div><Bar data={graphData} options={graphOptions}/></div>
+      <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+        {datasets.map((dataset) => (
+          <Dropdown.Item
+            onClick={() => {
+              setGraphData(dataset.data);
+              setGraphOptions(dataset.options);
+            }}
+          >
+            {dataset.label}
+          </Dropdown.Item>
+        ))}
+      </DropdownButton>
+      <div>
+        <Bar data={graphData} options={graphOptions} />
+      </div>
     </div>
   );
 }
 
-export default ChartWithDropDown
+export default ChartWithDropDown;
