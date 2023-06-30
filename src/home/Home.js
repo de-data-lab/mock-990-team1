@@ -10,8 +10,6 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
-import option from "../utils/Config";
-import data from "../utils/Data";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { allRecievedByState } from "../utils/Data";
