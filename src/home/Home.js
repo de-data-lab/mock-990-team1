@@ -16,6 +16,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { allRecievedByState } from "../utils/Data";
 import { option2018 } from "../utils/Config";
+import BasicButtonExample from "../Components/BarChart";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -43,6 +44,7 @@ function Home() {
         </Tab>
         <Tab eventKey="sector" title="Sector">
           Sector stuff
+          <BasicButtonExample/>
         </Tab>
         <Tab eventKey="state" title="State">
           State stuff
