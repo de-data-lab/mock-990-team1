@@ -1,13 +1,29 @@
 import React from "react";
 import "./Home.css";
 import { Bar } from "react-chartjs-2";
-import { BarElement,  CategoryScale,Chart as ChartJS,Legend, LinearScale,Title, Tooltip } from "chart.js";
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  Title,
+  Tooltip,
+} from "chart.js";
 import option from "../utils/Config";
 import data from "../utils/Data";
-import  {data2018}  from "../utils/Data";
-import {option2018}  from "../utils/Config";
-ChartJS.register(CategoryScale, LinearScale, BarElement,Title,Tooltip,Legend);
-
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import { allRecievedByState } from "../utils/Data";
+import { option2018 } from "../utils/Config";
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function Home() {
   return (
@@ -17,7 +33,21 @@ function Home() {
         <p className="lead">Our project about Non Profit Funding</p>
         <p>It's all fun here!</p>
       </div>
-      <Bar data={data2018} options={option2018}/>
+      <Tabs
+        defaultActiveKey="profile"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+      >
+        <Tab eventKey="overall" title="Overall">
+          <Bar data={allRecievedByState} options={option2018} />
+        </Tab>
+        <Tab eventKey="sector" title="Sector">
+          Sector stuff
+        </Tab>
+        <Tab eventKey="state" title="State">
+          State stuff
+        </Tab>
+      </Tabs>
     </div>
   );
 }
