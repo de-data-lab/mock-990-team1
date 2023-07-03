@@ -18,3 +18,36 @@ export const option2018 = {
       },
     },
   };
+
+  export const optionsSector = {
+    responsive: true,
+    plugins: {
+      datalabels:{
+        color: "black",
+        display:true,
+        anchor: "end",
+        align: "end",
+        font: {
+          weight: 'bold'
+        }
+      }
+    },
+  };
+
+  export const optionOverall = {
+    responsive: true,
+    plugins: {
+      datalabels:{
+        display:false,
+      }
+    },
+  };
+  export const optionStateOverall = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: "Nonprofit Charitible Contributions Recieved by State",
+      },
+    },
+  };
