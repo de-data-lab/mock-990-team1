@@ -17,15 +17,10 @@ export const data_overall = {
   labels: ["2018", "2019", "2020", "2021"],
   datasets: [
     {
-      label: "Total Contributions",
+      label: "Total Amount of Contributions Received Nationally in USD",
       data: [430398649383, 515244697114, 545042054128, 602993065031],
       backgroundColor: "green",
-    },
-    {
-      label: "Total Revenue",
-      data: [2491291716861, 2754961086019, 2883117621628, 2822548198878],
-      backgroundColor: "orange",
-    },
+    }
   ],
 };
 
