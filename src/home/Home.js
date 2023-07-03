@@ -14,7 +14,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { allRecievedByState , data_overall} from "../utils/Data";
 import { option2018, option} from "../utils/Config";
-import BasicButtonExample from "../Components/BarChart";
+import ChartWithDropDown from "../Components/BarChart";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -34,18 +34,21 @@ function Home() {
       </div>
       <Tabs
         defaultActiveKey="profile"
-        id="uncontrolled-tab-example"
+        id="tabs"
         className="mb-3"
       >
         <Tab eventKey="overall" title="Overall">
           <Bar data={data_overall} options={option} />
+          <p>Analysis goes here</p>
         </Tab>
         <Tab eventKey="sector" title="Sector">
          
-          <BasicButtonExample/>
+          <ChartWithDropDown/>
+          <p>Analysis goes here</p>
         </Tab>
         <Tab eventKey="state" title="State">
         <Bar data={allRecievedByState} options={option2018} />
+        <p>Analysis goes here</p>
         </Tab>
       </Tabs>
     </div>

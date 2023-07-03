@@ -24,7 +24,7 @@ ChartJS.register(
 );
 
 function ChartWithDropDown() {
-  const [graphData, setGraphData] = useState(data);
+  const [graphData, setGraphData] = useState(dataA);
   const [graphOptions, setGraphOptions] = useState(option);
 
   const datasets = [
