@@ -13,6 +13,21 @@ export const data = {
     },
   ],
 };
+export const data_overall = {
+  labels: ["2018", "2019", "2020", "2021"],
+  datasets: [
+    {
+      label: "Total Contributions",
+      data: [430398649383, 515244697114, 545042054128, 602993065031],
+      backgroundColor: "green",
+    },
+    {
+      label: "Total Revenue",
+      data: [2491291716861, 2754961086019, 2883117621628, 2822548198878],
+      backgroundColor: "orange",
+    },
+  ],
+};
 
 export const data2018 = {
   labels: [
@@ -70,7 +85,7 @@ export const data2018 = {
   ],
   datasets: [
     {
-      label: "Non Profit Funding",
+      label: "Total Contributions",
       data: [
         5839803445, 13677342442, 17256771517, 33128937388, 330628887878,
         38044461729, 37043460047, 59910269115, 10557629148, 105806640326,
@@ -156,7 +171,7 @@ export const allRecievedByState = {
         1485046591, 3975233844, 1084825448, 8324254924, 23877953018, 2218704491,
         15550226302, 1028012822, 9160321662, 6067193923, 1262959739, 558233346,
       ],
-      backgroundColor: "green",
+      backgroundColor: "blue",
     },
     {
       label: "2019",
@@ -171,7 +186,7 @@ export const allRecievedByState = {
         1619129903, 3629844853, 1041321270, 8910886599, 24150333252, 2366637050,
         15295495397, 984181081, 9900878873, 7163604243, 1249441756, 741234212,
       ],
-      backgroundColor: "blue",
+      backgroundColor: "orange",
     },
 
     {
@@ -187,7 +202,7 @@ export const allRecievedByState = {
         3563820685, 1124252667, 9614481290, 26589834141, 2461775760,
         14140120311, 873561896, 9372887999, 5413962256, 1218320754, 511710414,
       ],
-      backgroundColor: "red",
+      backgroundColor: "green",
     },
     {
       label: "2021",
@@ -203,7 +218,7 @@ export const allRecievedByState = {
         10892360060, 30990054716, 3461447554, 20446958953, 1527289534,
         14251655493, 8139564810, 1833298473, 757107316,
       ],
-      backgroundColor: "yellow",
+      backgroundColor: "red",
     },
   ],
 };

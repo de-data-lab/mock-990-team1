@@ -12,8 +12,8 @@ import {
 } from "chart.js";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { allRecievedByState } from "../utils/Data";
-import { option2018 } from "../utils/Config";
+import { allRecievedByState , data_overall} from "../utils/Data";
+import { option2018, option} from "../utils/Config";
 import BasicButtonExample from "../Components/BarChart";
 ChartJS.register(
   CategoryScale,
@@ -38,14 +38,14 @@ function Home() {
         className="mb-3"
       >
         <Tab eventKey="overall" title="Overall">
-          <Bar data={allRecievedByState} options={option2018} />
+          <Bar data={data_overall} options={option} />
         </Tab>
         <Tab eventKey="sector" title="Sector">
-          Sector stuff
+         
           <BasicButtonExample/>
         </Tab>
         <Tab eventKey="state" title="State">
-          State stuff
+        <Bar data={allRecievedByState} options={option2018} />
         </Tab>
       </Tabs>
     </div>
